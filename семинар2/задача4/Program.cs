@@ -15,7 +15,7 @@
 
 void Multiplicity( int arg)
 {
-    if (arg % 7 == 0 & arg % 23 == 0)
+    if (arg % 7 == 0 & arg % 23 == 0)    //& - это "И"; || - это "ИЛИ"
     {
         Console.Write("Число кратно и 7 и 23!");
     }
