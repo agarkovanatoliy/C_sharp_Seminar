@@ -1,16 +1,36 @@
-﻿// найти максимум из 9 чисел с помощью функции и массива
+﻿// Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число
+// кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
 
-int Max(int arg1, int arg2, int arg3)
+// Console.Write("Введите первое число: ");
+// int number1 = int.Parse( Console.ReadLine());
+// Console.Write("Введите второе число: ");
+// int number2 = int.Parse( Console.ReadLine());
+
+// if (number1 % number2 == 0)
+// {
+//     Console.WriteLine("Числа кратные!");
+// }
+// else
+// {
+//     Console.Write("Числа не кратные! Остаток: " + number1 % number2);
+// }
+
+void Multiplicity(int arg1, int arg2)
 {
-    int result = arg1;
-    if(arg2 > result) result = arg2;
-    if(arg3 > result) result = arg3;
-    return result; // retrn возвращает результат работы функции
+    if (arg1 % arg2 == 0)
+    {
+        Console.WriteLine("Числа кратные!");
+    }
+    else
+    {
+        Console.Write("Числа не кратные! Остаток: " + arg1 % arg2);
+    }
+
 }
 
-int[] array={11, 21, 31, 451, 56, 63, 17, 18, 19};
+Console.Write("Введите первое число: ");
+int number1 = int.Parse( Console.ReadLine());
+Console.Write("Введите второе число: ");
+int number2 = int.Parse( Console.ReadLine());
 
-int max = Max(Max(array[0], array[1], array[2]), Max(array[3], array[4], array[5]), Max(array[6], array[7], array[8]));
-
-
-Console.WriteLine(max);
+Multiplicity(number1, number2);

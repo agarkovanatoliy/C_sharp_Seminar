@@ -1,17 +1,31 @@
-﻿// Поиск элемента массива
+﻿// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно
+// одновременно 7 и 23.
 
-int[] array = {1, 12, 31, 4, 15, 16, 17, 18};
-int n = array.Length;                        // определяет длину массива
-int find = 16;
-int index = 0;
+// Console.Write("Введите число: ");
+// int number = int.Parse( Console.ReadLine());
 
-while (index < n)
+// if (number % 7 == 0 & number % 23 == 0)
+// {
+//     Console.Write("Число кратно и 7 и 23!");
+// }
+// else
+// {
+//     Console.Write("Число не кратно и 7 и 23!");
+// }
+
+void Multiplicity( int arg)
 {
-    if (array[index] == find)
+    if (arg % 7 == 0 & arg % 23 == 0)    //& - это "И"; || - это "ИЛИ"
     {
-        Console.WriteLine(index);
-        break;                      // Принудительно завершает работу после нахождения первого элемента
+        Console.Write("Число кратно и 7 и 23!");
     }
-    index ++;
-} 
+    else
+    {
+        Console.Write("Число не кратно и 7 и 23!");
+    }
+}
 
+Console.Write("Введите число: ");
+int number = int.Parse( Console.ReadLine());
+
+Multiplicity( number );

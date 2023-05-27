@@ -1,54 +1,16 @@
-﻿// Поиск элемента массива с использованием методов
+﻿// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно
+// число квадратом другого.
 
-// Метод заполнения массива рандомными числами в диапазоне от 1 до 10
+Console.Write("Введите первое число: ");
+int number1 = int.Parse( Console.ReadLine());
+Console.Write("Введите второе число: ");
+int number2 = int.Parse( Console.ReadLine());
 
-void FillArray(int[] collection)   // Void - метод которй ничего не возвращает
+if (number1 * number1 == number2 || number2 * number2 == number1)
 {
-    int Length = collection.Length;
-    int index = 0;
-    while (index < Length)
-    {
-        collection[index] = new Random().Next(1, 10);
-        index ++;
-    }
+    Console.WriteLine("Одно число является квадратом второго");
 }
-
-// Метод печати массива
-
-void PrintArray(int[] col)
+else
 {
-    int count = col.Length;
-    int position = 0;
-    while (position < count)
-    {
-        Console.WriteLine(col[position]);
-        position ++;
-    }
+    Console.WriteLine("Одно число не является квадратом второго ");
 }
-
-// Функция поиска позиции в массиве
-
-int IndexOf(int[] collection, int find)
-{
-    int count = collection.Length;
-    int index = 0;
-    int position = -1;
-    while ( index < count)
-    {
-        if (collection[index] == find)
-        {
-            position = index;
-            break;
-        }
-        index ++;
-    }
-    return position;
-}
-
-int[] array = new int[10];
-
-FillArray(array);
-PrintArray(array);
-Console.WriteLine();
-int pos = IndexOf( array, 4);
-Console.WriteLine(pos);
