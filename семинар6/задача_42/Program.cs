@@ -57,5 +57,12 @@ void Convert10To2(int num)
 
 }
 
+// int a = Input();
+// Convert10To2 (a);
+
+
+// решение с помощью втроенных функций
+
 int a = Input();
-Convert10To2 (a);
+string res1=Convert.ToString(a,2);
+Console.WriteLine(res1);
