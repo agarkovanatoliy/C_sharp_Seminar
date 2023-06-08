@@ -9,29 +9,53 @@ int Input()
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
-int[] Solution(int num)
+
+//решение с помощью массива математически
+
+// int[] Solution(int num)
+// {
+//     int[] res = new int[] {};
+//     int i = 0;
+//     while (num > 0)
+//     {   
+//         Array.Resize(ref res, res.Length + 1);    
+//         res[i] = num % 2;
+//         num = num /2;
+//         i++;    
+//     }
+//     return res;
+// }
+// int[] ReverseArray2(int[] inArray)
+// {
+//     int[] res = new int[inArray.Length];
+//     for (int i = 0; i < inArray.Length; i++)
+//     {
+//         res[i] = inArray[inArray.Length - 1 - i];
+//         Console.Write($"{res[i]}");
+//     }
+//     return res;
+// }
+// int num1 = Input();
+// int[] newArray = Solution(num1);
+// ReverseArray2(newArray);
+
+
+
+// решениу с помощью строки
+void Convert10To2(int num)
 {
-    int[] res = new int[] {};
-    int i = 0;
+    int res = 0;
+    string showresult = string.Empty;
     while (num > 0)
-    {   
-        Array.Resize(ref res, res.Length + 1);    
-        res[i] = num % 2;
-        num = num /2;
-        i++;    
-    }
-    return res;
-}
-int[] ReverseArray2(int[] inArray)
-{
-    int[] res = new int[inArray.Length];
-    for (int i = 0; i < inArray.Length; i++)
     {
-        res[i] = inArray[inArray.Length - 1 - i];
-        Console.Write($"{res[i]}");
+        res = num % 2;
+        num /= 2;
+        showresult = res + showresult; // 0 + "пустое значени" // 0+0 // 0+00 // 1+000//
     }
-    return res;
+    Console.WriteLine();
+    Console.WriteLine(showresult);
+
 }
-int num1 = Input();
-int[] newArray = Solution(num1);
-ReverseArray2(newArray);
+
+int a = Input();
+Convert10To2 (a);
